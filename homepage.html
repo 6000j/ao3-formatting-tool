@@ -3,13 +3,36 @@
 <head>
     <script src="src/converter.js"></script>
 </head>
+<style>
+.flex-container {
+  display: flex;
+}
+</style>
 <body>
-<p>testing</p>
-<form>
-    <p><label for="textInput">Put the text to convert in below</label></p>
-    <textarea id="textInput" name="textInput" rows="40" cols="80" placeholder="put your text here"></textarea>
-    <br>
-    <input type="button" value="Convert" onclick="startConversion()">
-  </form>
+<div class="flex-container">
+  <div>
+    <form>
+      <p><label for="textInput">Put the text to convert in below</label></p>
+      <textarea id="textInput" name="textInput" rows="40" cols="80" placeholder="put your text here"></textarea>
+      <br>
+      <input type="button" value="Convert" onclick="startConversion()">
+    </form>
+  </div>
+  <div>
+    <p><h1>Syntax</h1></p>
+    <div id = "syntax-guide">
+      <h3>Footnotes:</h3>
+      <h4>Opening footnotes:</h4>
+      <p>Use square brackets around the footnote name, like so: [1]</p>
+      <h4>Break:</h4>
+      <p>Include <b>"[TEXTBREAK]"</b> between your main body of work and the footnotes section. The code will not work properly otherwise.</p>
+      <h4>Footnotes Text:</h4>
+      <p>For the text of the footnotes, surround each entire footnote by [], and also include [a] at the start inside it, where 'a' is the name of the footnote in the main text that links to this one.</p>
+      <p>Example:   [[1] This is a footnote.]</p>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
